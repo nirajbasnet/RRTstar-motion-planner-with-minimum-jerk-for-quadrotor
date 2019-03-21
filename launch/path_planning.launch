@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="sampling_type" default="uniform"/>
+    <arg name="display_octomap" default="true"/>
+    <param name="display_octomap" value="$(arg display_octomap)"/>
+    <param name="sampling_type" value="$(arg sampling_type)"/>
+    <!--<node name="goal_transform" pkg="path_planning" type="goalpoint_transformer" output="screen" /> -->
+    <node name="quad_rrt_planner_node" pkg="path_planning" type="quad_planner" respawn="true" output="screen"/>
+    <node name="trajectory_generator" pkg="path_planning" type="trajectory_generator" output="screen" />
+    <node type="rviz" name="rviz" pkg="rviz" args="-d $(find path_planning)/rviz/quadworld.rviz" />
+
+  
+  
+</launch>
+
+

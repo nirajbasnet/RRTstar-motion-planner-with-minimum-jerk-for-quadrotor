@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="sample_type" default="uniform"/>
+    <param name="sampling_type" value="$(arg sample_type)"/>
+    <node name="benchmark_node" pkg="path_planning" type="benchmark" respawn="true" output="screen"/>
+</launch>
+
+
