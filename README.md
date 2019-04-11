@@ -21,7 +21,7 @@ In order to run benchmarking for different types of sampling strategies, run the
 roslaunch path_planning benchmark.launch
 ```
 
-##Path planning visualization
+## Path planning visualization
 Visualization of path planning of quadrotor from one point to other is shown below. Gazebo and Rviz visualizations
 are shown below. In Rviz, green one is orginal trajectory and red one is the jerk minimal trajectory. The planning
 time is restricted to just 5 seconds. When more time is allowed, the path obtained gets shorter and more smooth as well.
